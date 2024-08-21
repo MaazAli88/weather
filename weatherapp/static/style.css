@@ -1,0 +1,202 @@
+/* Created by Tivotal */
+
+/* Google Fonts(Poppins) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: 0.5s;
+}
+
+:root {
+  --bg-color: #f2f3f7;
+  --font-color: #222;
+  --button-bg-color: #f2f3f7;
+  --button-shadow: -6px -6px 8px rgba(255, 255, 255, 0.9),
+    5px 5px 8px rgba(0, 0, 0, 0.07);
+  --wind-color: #0f345fe3;
+}
+
+[data-theme="dark"] {
+  --font-color: #fff;
+  --bg-color: #181818;
+  --button-bg-color: #121212;
+  --button-shadow: -2px -2px 4px rgba(255, 255, 255, 0.05),
+    0 0 10px 10px rgba(255, 255, 255, 0.005), 2px 2px 8px rgba(60, 60, 60, 0.1);
+  --wind-color: orange;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  color: var(--font-color);
+  font-size: 18px;
+  background-color: #cecece;
+}
+
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 100px;
+}
+
+.content {
+  display: block;
+  flex: 1;
+  min-height: 500px;
+  max-width: 350px;
+  background-color: var(--bg-color);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 50px 50px 50px 0px rgba(0, 0, 0, 0.25);
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.appbar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.button {
+  position: relative;
+  background: var(--button-bg-color);
+  font-weight: 700;
+  color: var(--font-color);
+  border-radius: 15px;
+  border: 0;
+  box-shadow: var(--button-shadow);
+  cursor: pointer;
+}
+
+.button.small {
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  line-height: 40px;
+  color: #6d6e74;
+}
+
+.header {
+  display: block;
+  flex: 1;
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--font-color);
+  margin: 0;
+}
+
+.block {
+  width: 100%;
+  padding: 15px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.block span {
+  font-size: 16px;
+}
+
+.subtitle {
+  color: #6d6e74;
+}
+
+.btn-out {
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+  margin: 35px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spoke {
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 83%;
+  background-color: rgba(96, 171, 254, 0.6);
+  top: 50%;
+  margin: 0 auto;
+  z-index: 5;
+}
+
+.spoke:nth-child(2) {
+  transform: rotate(30deg);
+}
+
+.spoke:nth-child(3) {
+  transform: rotate(60deg);
+}
+
+.spoke:nth-child(4) {
+  transform: rotate(90deg);
+}
+
+.spoke:nth-child(5) {
+  transform: rotate(120deg);
+}
+
+.spoke:nth-child(6) {
+  transform: rotate(150deg);
+}
+
+.btn-in {
+  width: 70%;
+  height: 70%;
+  text-align: center;
+  background: var(--button-bg-color);
+  border-radius: 50%;
+  box-shadow: var(--button-shadow);
+  margin: 0 auto;
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  z-index: 5;
+}
+
+.btn-label {
+  z-index: 10;
+  position: relative;
+  font-size: 28px;
+  color: #067cf8;
+}
+
+.card-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  text-align: left;
+  padding: 15px;
+}
+
+.card i {
+  width: 30px;
+  height: auto;
+  margin-bottom: 40px;
+  margin-top: 25px;
+  color: #067cf8;
+}
+
+.card i.wind {
+  color: var(--wind-color);
+}

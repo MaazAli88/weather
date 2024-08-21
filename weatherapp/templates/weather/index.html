@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}Weather App{% endblock title %}
+
+{% block content %}
+<div class="container">
+  <div class="content" data-theme="light">
+    <div class="appbar">
+      <button class="button small">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <h1 class="header">Weather App</h1>
+      <button class="button small toogler">
+        <i class="fas fa-moon" id="icon"></i>
+      </button>
+    </div>
+
+    <div class="main">
+      <button class="button block">
+        <span class="subtitle">City</span> 
+        <span>{{ weather.name }}</span>
+        <div class="button small">
+          <i class="fas fa-chevron-right"></i>
+        </div>
+      </button>
+
+      <div class="button btn-out">
+        <span class="spoke"></span>
+        <span class="spoke"></span>
+        <span class="spoke"></span>
+        <span class="spoke"></span>
+        <span class="spoke"></span>
+        <span class="spoke"></span>
+        <div class="btn-in"></div>
+        <div class="btn-label">
+          <i class="fas fa-temperature-half"></i>
+          {{ weather.main.temp }}°C
+        </div>
+      </div>
+
+      <div class="card-wrapper">
+        <button class="button card">
+          <i class="fas fa-cloud-rain fa-2xl"></i>
+          {{ weather.main.humidity }}%
+        </button>
+        <button class="button card">
+          <i class="fas fa-wind fa-2xl wind"></i>
+          {{ weather.wind.speed }} m/s
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
